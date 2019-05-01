@@ -14,7 +14,7 @@ function nowServing (katzDeliLine){
  // conditional statement: 'if there is nobody in line...'
  if (katzDeliLine.length === 0) {
    return "There is nobody waiting to be served!"
- } /*Or else at index 0 (first customer in line), remove 1 customer (non-destructive method) but could also use shift.*/
+ } //Or else at index 0 (first customer in line), remove 1 customer
  else { 
    return "Currently serving " +katzDeliLine.splice(0, 1)+ ".";
  }

@@ -1,11 +1,13 @@
 var katzDeliLine = []
 
 // Build a function that a new customer will use when entering the deli. 
-function takeANumber (katzDeliLine, customerName){
+var customerNumber = 1;
+
+function takeANumber (katzDeliLine){
   // Adding customer to the current line.
-  katzDeliLine.push(customerName);
+  katzDeliLine.push(++customerNumber);
   //Printing the welcome message including the new person's position in line.
-  return `Welcome, ${customerName}. You are number ${katzDeliLine.length} in line.`
+  return `Welcome. You are number ${customerNumber}.`
 }
 
 //Build a function nowServing.
@@ -16,7 +18,7 @@ function nowServing (katzDeliLine){
    return "There is nobody waiting to be served!"
  } //Or else at index 0 (first customer in line), remove 1 customer
  else { 
-   return "Currently serving " +katzDeliLine.splice(0, 1)+ ".";
+   return "Currently serving " +katzDeliLine.shift()+ ".";
  }
 }
 
